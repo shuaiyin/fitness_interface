@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  
+    <link rel="stylesheet" href="{{ static_url("blog.css") }}" type="text/css"/>
+    <script type="text/javascript" src="{{static_url("jquery.js")}}"></script>
+
+  </head>
+  <body>
+       <div style="color:red;margin:20px;text-align:center;">hello,{{username}},welcome back!</div>
+      
+         <center>
+            <div>
+      		    <form action="/" method="post">
+                <textarea cols="50" name="postContent" placeHolder="something new?"></textarea>
+      		      <div style="margin-left:60%;"><input type="submit" value="Submit"></div>
+
+      		    </form>
+            </div>
+
+          </center>
+         
+          <div style="margin-left:15%">
+           {% for post in post_info %}
+            <div>
+              <span><a href="/profile" style="color:green;">{{post['username']}}</a></span>&nbsp;&nbsp;,
+              &nbsp;&nbsp;<span>{{post['current_time']}}</span>
+            </div>
+
+            <div style="margin-top:10px;">
+              <span>{{post['post_content']}}</span>
+            </div>
+           {% end %}
+          </div>
+
+  <button id="yin">fasfsa</button>	   
+       
+       
+
+  </body>
+</html>
+
+ <script type="text/javascript">
+  $('#yin').click(function(){
+    $.ajax({
+      'type':'post',
+      'data':{'testid':152},
+      'url':'/follow',
+      'success':function(data){
+         alert(data)
+      }
+
+    })
+  })
+// </script>

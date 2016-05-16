@@ -1,0 +1,14 @@
+  <div class="zt_pmBox">
+       {% if not have_attend %}
+          you have not attend the game
+       {% else %}
+        <h2>我本周的排名</h2>
+        <h3><table height="70" style="margin:0 auto"><tr><td>第</td><td><strong>{{my_rank}}</strong></td><td>名</td></tr></table></h3>
+        <!-- <div class="zt_pmBoxIcone"><img src="http://101.200.214.68/Uploads/gameInfoPic/icon5.png" width="100%" /><span>100</span></div> -->
+        <div class="zt_pmBoxBg">
+          <div style="height:22px;"></div>
+          <img src="{{my_run['avatar']}}" width="75" height="75">
+         </div>
+         <div class="zt_pmBoxText"><span>运动里程：{{my_run['step']}}步</span><span class="right">{{my_run['distance']}} km</span></div>
+      {% end %}
+  </div> 

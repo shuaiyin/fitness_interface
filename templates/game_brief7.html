@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>今日排行榜</title>
+<meta name="description" content="今日排行榜" />
+<meta name="Keywords" content="今日排行榜" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<style>
+	@charset "utf-8";
+/* 全局样式 */
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal;}
+body>div, form>div {margin:0 auto;}
+div {text-align:left;}
+a img {border:0;}
+table{border-collapse:collapse; border-spacing:0;}
+select,textarea{font: 12px Arial,"微软雅黑";}
+body {color:#454545;text-align:center;font: 12px Arial,"微软雅黑";}
+ul, ol, li {list-style-type:none;vertical-align:0;}
+a {outline-style:none;color:#454545;text-decoration:none;}
+a:hover {color:#035f79;text-decoration:none;}
+a, area {blr:expression(this.onFocus=this.blur())}
+:focus {-moz-outline-style: none;}
+.clear {clear:both;}
+.hidden {display:none;}
+.block {display:block;}
+.left{float:left;}
+.right{float:right;}
+.bd{border:1px #e1e1e1 solid; background:#FFF}
+.bd3{border:1px #e1e1e1 solid; border-top:0px; background:#FFF}
+
+
+/* 首页样式 */
+.zt_bgf5f5f5{ background:#f5f5f5}
+.zt_he10{ height:10px; font-size:0;}
+.bg_eeeeee{ background:#eeeeee}
+.zt_img img{ display:block}
+.zt_img_yj{ -moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.bd_bt{ border-top:1px #d9d9d9 solid}
+
+.zt_text1 h2 img{ display:block; margin:8px auto}
+.zt_text1 p{ text-align:center; font-size:14px; color:#898989}
+.zt_text1 { padding-bottom:8px; padding-top:2px}
+.zt_listUl{ padding:4% 0;}
+.zt_listUl .zt_img{ width:18%; padding:0 2%}
+.zt_listUl .zt_img img{ display:block;-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.zt_listUl .zt_text{ width:78%}
+.zt_listUl .zt_text p{ font-size:13px}
+.zt_listUl h2 span{ color:#c9cfd0; float:left; margin:8px 0 0 6px}
+.zt_listUl h2 { height:26px; display:block; overflow:hidden; margin-bottom:4px}
+.zt_listUl h2 img{ display:block; float:left; color:#898989}
+.zt_listUl p{ display:block; color:#898989; background:url(../images/icon4.png) no-repeat left center; padding-left:20px; line-height:160% }
+.zt_listUl a{ display:block; background:url(../images/jtBg.png) no-repeat right center;}
+
+
+.zt_listUl.alt{ background:#eef8fa url(../images/lineBg.jpg) repeat-x top; border-bottom:1px #e5e5e5 solid }
+
+.zt_top{ height:40px; line-height:40px; background:#fafafa}
+.zt_top li{ float:left; width:25%; display:block; height:40px; text-align:center; font-size:16px}
+.zt_top li.mCon_Cutbtn{ background:url(../images/lineBg1.jpg) no-repeat center top; color:#FFF}
+.zt_top li.mCon_CutbtnBg{ background:url(../images/icon7.jpg) no-repeat right; color:#0088a3; font-weight:bold}
+.zt_top li.mCon_CutbtnBg span{ padding-right:24px;}
+.zt_pmBoxIcone{ width:40px; position:absolute; right:20px; top:40px; text-align:center}
+
+
+.zt_pmBox{ width:100%;background-image: url(../images/bg01.jpg);position:relative}
+.zt_pmBox h2,.zt_pmBox h3{ display:block; text-align:center}
+
+.zt_pmBoxBg img{-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */ margin:0 auto; display:block;}
+.zt_pmBoxBg { width:124px; height:124px; margin:0 auto; background: url(../images/tuPic.png) no-repeat}
+.zt_pmBoxText{ text-align:center; font-size:18px; line-height:50px; padding:0 10px; position:relative}
+.zt_pmBoxText span.right{ position:absolute; right:10px; top:0px;}
+.zt_pmBoxText span{ display:inline-block}
+
+.zt_pmBox h2{ color:#414141; font-size:18px; display:block; padding-top:16px}
+.zt_pmBox h3 strong{ font-size:60px; padding:0 10px;}
+.zt_pmBox h3{ font-size:18px; }
+
+.zt_lineBox{ height:4px; background:#f91354;}
+.zt_lineBox2{ height:10px; background:#f91354; height:8px; margin-top:4px;}
+
+.zt_imgListUl{ height:80px; border-bottom:1px #dddddd solid }
+.zt_imgListUl .zt_imgUl1{ margin:20px 14px 0 14px; width:20px; line-height:40px; font-size:18px; text-align:center}
+.zt_imgListUl .zt_imgUl2{ margin-top:10px}
+.zt_imgListUl .zt_imgUl2 img{-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */ margin:0 auto; display:block;} 
+.zt_imgListUl .zt_imgUl3{ line-height:80px; font-size:18px; padding-left:14px; color:#727171}
+
+.zt_imgListUl .right{padding-right:10px;}
+.zt_imgListUl .right p{ font-size:18px; color:#727171; display:block; padding-top:12px; padding-bottom:2px;}
+.zt_imgListUl .right span{ float:left; height:30px; line-height:30px; color:#727171; font-size:16px; padding-right:6px}
+.zt_imgListUl .right .zt_imgUl4{ float:right}
+
+.zt_titleH1{ height:30px; margin:0 10px; background:#eaeaea}
+.zt_titleH1 strong{ font-size:14px; color:#FFF; padding:0 16px; background:#f91354; display:block; height:30px; line-height:30px;}
+.zt_titleH1 a{ background:url(../images/icon8.jpg) no-repeat center right; padding-right:22px; display:block; line-height:30px; color:#898989}
+.zt_text_p{ margin:0 10px; padding:10px; -moz-border-radius:20px;/* Gecko browsers */webkit-border-radius: 20px;   /* Webkit browsers */border-radius:20px;/* W3C syntax */ font-size:14px;}
+.zt_text_p p,.zt_text_p a{ color:#898989;font-size:14px; line-height:22px; text-indent:30px}
+.zt_text_p p {text-align:justify;text-justify:inter-ideograph}
+
+.zt_hotHot{ margin:0 10px}
+.zt_hotHot li{ float:left; width:50%; display:block; height:60px; padding-top:10px}
+.zt_hotHot li img{-moz-border-radius:150px;/* Gecko browsers */webkit-border-radius: 150px;   /* Webkit browsers */border-radius:150px;/* W3C syntax */display:block; float:left; margin-right:10px;}
+.zt_hotHot li h2{ font-size:16px; color:#727171; display:block; padding-top:6px}
+.zt_hotHot li p{ font-size:14px; color:#727171}
+.zt_xqListUl{ padding:20px; line-height:20px; font-size:14px; color:#898989}
+
+.zt_xqTitle{ text-align: center; margin:10px; line-height:26px; background:url(../images/line1.png) no-repeat left top}
+.zt_xqTitleBg{ background:url(../images/line2.png) no-repeat right bottom; padding:16px 10px; text-align:center}
+
+.zt_xqTitle h2{ color:#000000; font-size:18px;}
+.zt_xqTitle h3{ color:#000000;font-size:18px;}
+
+.zt_xqText{ background:#f4f5f5; padding:6px 16px;}
+.zt_xpTextList h3{ display: inline-block; background:#0086a4; color:#FFF;-moz-border-radius:15px;/* Gecko browsers */webkit-border-radius: 15px;   /* Webkit browsers */border-radius:15px;/* W3C syntax */ line-height:24px; padding:2px 16px; margin:10px 0; font-size:14px}
+.zt_xpTextList_p{ background:#FFF; color:#898989;-moz-border-radius:4px;/* Gecko browsers */webkit-border-radius:4px;   /* Webkit browsers */border-radius:4px;/* W3C syntax */ padding:10px; font-size:14px; line-height:22px;}
+
+.bg_4c4c4c{ background:#4c4c4c}
+.zt_he6{ height:6px; font-size:0}
+.bgMg8{ margin:8px;}
+.zt_bgPd1{ background:#e8efbb; padding:16px;}
+.zt_bgPd1 .tt1{ background:url(../images/pp2.png) no-repeat 110px center}
+.pText{ background:#FFF;-moz-border-radius:15px;/* Gecko browsers */webkit-border-radius:15px;   /* Webkit browsers */border-radius:10px;/* W3C syntax */ padding:20px}
+.pText p{ font-size:14px; color:#898989; line-height:24px;}
+.bgPd8{ padding:8px;}
+.zt_bgPd2{ background:#f4e4a6;padding:16px;}
+.zt_bgPd2 .tt1{ background:url(../images/pp1.png) no-repeat right center; height:30px;}
+.zt_bgPd2 .tt1 img{ float:right}
+
+</style>
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script>
+	jQuery(function(){
+	
+	
+jQuery(".mChangeTag .mCon_btn").click(function(){jQuery(this).parent().find(".mCon_btn").removeClass("mCon_Cutbtn");jQuery(this).addClass("mCon_Cutbtn");var cutNum=jQuery(this).parent().find(".mCon_btn").index(this);jQuery(this).parents(".mChangeTag").find(".mCon_conTxt").hide();jQuery(this).parents(".mChangeTag").find(".mCon_conTxt").eq(cutNum).show();})
+
+$(".zt_listUl:odd").addClass("alt");    
+    //给class为stripe的表格的偶数行添加class值为alt 
+    //www.divcss5.com 整理特效 
+})
+
+</script>
+</head>
+<body>
+<div class="zt_img"><img src="http://101.200.214.68/Uploads/gameInfoPic/pic2.jpg" width="100%" /></div>
+<div class="zt_xqTitle">
+	<div class="zt_xqTitleBg">
+		<h2>2016年北京市民健康走跑系列活动</h2>
+		<h3>全面健身Ready Go专场</h3>
+	</div>
+</div>
+<div class="zt_he6 bg_4c4c4c"></div>
+<div class="bg_4c4c4c bgMg8 bgPd8">
+	<div class="zt_bgPd1">
+		<div class="tt1"><img src="http://101.200.214.68/Uploads/gameInfoPic/bj1.png" width="100"></div>
+		<div class="zt_he10"></div>
+		<div class="pText">
+			<p>喜迎冬奥 奔向2022</p>
+		</div>
+	</div>
+	<div class="zt_he6 bg_4c4c4c"></div>
+	<div class="zt_bgPd2">
+		<div class="tt1"><img src="http://101.200.214.68/Uploads/gameInfoPic/bj2.png" width="100"></div>
+		<div class="zt_he10"></div>
+		<div class="pText">
+			<p>北京市社会体育管理中心联合全民健身Ready Go手机App，开展线上专场活动。通过App记录每日健走步数和里程，并进行每日、周、月排行榜；年终进行年度排行，并按照一定比例予以奖励。</p>
+			<p>活动紧扣"喜迎冬奥 奔向2022"的主题，在充分宣传奥运精神、积极营造喜迎冬奥的社会氛围的同时，广泛发动群众充分利用身边的场地和余暇时间积极参与到简便易行的健康走跑运动中来，帮助人们形成常态化的健康走跑健身习惯。</p>
+		</div>
+	</div>
+	<div class="zt_he6 bg_4c4c4c"></div>
+	<div class="zt_bgPd1">
+		<div class="tt1"><img src="http://101.200.214.68/Uploads/gameInfoPic/bj3.png" width="100"></div>
+		<div class="zt_he10"></div>
+		<div class="pText">
+			<p>2016年5月-12月</p>
+		</div>
+	</div>
+	<div class="zt_he6 bg_4c4c4c"></div>
+	<div class="zt_bgPd2">
+		<div class="tt1"><img src="http://101.200.214.68/Uploads/gameInfoPic/bj4.png" width="100"></div>
+		<div class="zt_he10"></div>
+		<div class="pText">
+			<p>主办单位：北京市体育局、北京市总工会</p>
+			<p>承办单位：北京市社会体育管理中心</p>
+			<p>协办单位：北京菲奥文化传播有限公司</p>
+		</div>
+	</div>
+	<div class="zt_he6 bg_4c4c4c"></div>
+	<div class="zt_bgPd1">
+		<div class="tt1"><img src="http://101.200.214.68/Uploads/gameInfoPic/bj5.png" width="100"></div>
+		<div class="zt_he10"></div>
+		<div class="pText">
+			<p>1. 活动对象：注册用户均可报名参与活动（年终活动奖励具有地域性，仅向北京地区发放）</p>
+			<p>2. 参与活动人员应根据自身健康状况，合理安排运动量和运动强度，避免盲目追求成绩而过度运动。</p>
+			<p>3. 凡参加活动人员均为自愿参加，自我管理，风险自担，责任自负。</p>
+			<p>4. 活动最终解释权归北京市社会体育管理中心，联系电话：010-83167005。</p>
+			<p>5. 凡参加活动者均视为已阅读并同意本须知内容。</p>
+		</div>
+	</div>
+	<div class="zt_he6 bg_4c4c4c"></div>
+	<div class="zt_bgPd2">
+		<div class="tt1"><img src="http://101.200.214.68/Uploads/gameInfoPic/bj6.png" width="100"></div>
+		<div class="zt_he10"></div>
+		<div class="pText">
+			<p>1.每周期奖励办法如下：</p>
+			<p><img src="http://101.200.214.68/Uploads/gameInfoPic/tab.jpg" width="100%" /></p>
+			<p>2.积分可用于积分商城兑换</p>
+		</div>
+	</div>
+	
+	
+</div>
+<body/>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<style>
+	@charset "utf-8";
+/* 全局样式 */
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal;}
+body>div, form>div {margin:0 auto;}
+div {text-align:left;}
+a img {border:0;}
+table{border-collapse:collapse; border-spacing:0;}
+select,textarea{font: 12px Arial,"微软雅黑";}
+body {color:#454545;text-align:center;font: 12px Arial,"微软雅黑";}
+ul, ol, li {list-style-type:none;vertical-align:0;}
+a {outline-style:none;color:#454545;text-decoration:none;}
+a:hover {color:#035f79;text-decoration:none;}
+a, area {blr:expression(this.onFocus=this.blur())}
+:focus {-moz-outline-style: none;}
+.clear {clear:both;}
+.hidden {display:none;}
+.block {display:block;}
+.left{float:left;}
+.right{float:right;}
+.bd{border:1px #e1e1e1 solid; background:#FFF}
+.bd3{border:1px #e1e1e1 solid; border-top:0px; background:#FFF}
+
+
+/* 首页样式 */
+.zt_bgf5f5f5{ background:#f5f5f5}
+.zt_he10{ height:10px; font-size:0;}
+.bg_eeeeee{ background:#eeeeee}
+.zt_img img{ display:block}
+.zt_img_yj{ -moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.bd_bt{ border-top:1px #d9d9d9 solid}
+
+.zt_text1 h2 img{ display:block; margin:8px auto}
+.zt_text1 p{ text-align:center; font-size:14px; color:#898989}
+.zt_text1 { padding-bottom:8px; padding-top:2px}
+.zt_listUl{ padding:4% 0;}
+.zt_listUl .zt_img{ width:18%; padding:0 2%}
+.zt_listUl .zt_img img{ display:block;-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.zt_listUl .zt_text{ width:78%}
+.zt_listUl .zt_text p{ font-size:13px}
+.zt_listUl h2 span{ color:#c9cfd0; float:left; margin:8px 0 0 6px}
+.zt_listUl h2 { height:26px; display:block; overflow:hidden; margin-bottom:4px}
+.zt_listUl h2 img{ display:block; float:left; color:#898989}
+.zt_listUl p{ display:block; color:#898989; background:url(http://101.200.214.68/Uploads/gameInfoPic/icon4.png) no-repeat left center; padding-left:20px; line-height:160% }
+.zt_listUl a{ display:block; background:url(http://101.200.214.68/Uploads/gameInfoPic/jtBg.png) no-repeat right center;}
+
+
+.zt_listUl.alt{ background:#eef8fa url(http://101.200.214.68/Uploads/gameInfoPic/lineBg.jpg) repeat-x top; border-bottom:1px #e5e5e5 solid }
+
+.zt_top{ height:40px; line-height:40px; background:#fafafa}
+.zt_top li{ float:left; width:20%; display:block; height:40px; text-align:center; font-size:16px}
+.zt_top li.mCon_Cutbtn{ background:url(http://101.200.214.68/Uploads/gameInfoPic/lineBg1.jpg) no-repeat center top; color:#FFF}
+.zt_top li.mCon_CutbtnBg{ background:url(http://101.200.214.68/Uploads/gameInfoPic/icon7.jpg) no-repeat right; color:#0088a3; font-weight:bold}
+.zt_top li.mCon_CutbtnBg span{ padding-right:24px;}
+.zt_pmBoxIcone{ width:40px; position:absolute; right:20px; top:40px; text-align:center}
+
+
+.zt_pmBox{ width:100%;background-image: url(http://101.200.214.68/Uploads/gameInfoPic/bg01.jpg);background-attachment:fixed;background-repeat:no-repeat;background-size:cover;-moz-background-size:cover;-webkit-background-size:cover; position:relative}
+.zt_pmBox h2,.zt_pmBox h3{ display:block; text-align:center}
+
+.zt_pmBoxBg img{-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */ margin:0 auto; display:block;}
+.zt_pmBoxBg { width:124px; height:124px; margin:0 auto; background: url(http://101.200.214.68/Uploads/gameInfoPic/tuPic.png) no-repeat}
+.zt_pmBoxText{ text-align:center; font-size:18px; line-height:50px; padding:0 10px; position:relative}
+.zt_pmBoxText span.right{ position:absolute; right:10px; top:0px;}
+.zt_pmBoxText span{ display:inline-block}
+
+.zt_pmBox h2{ color:#414141; font-size:18px; display:block; padding-top:16px}
+.zt_pmBox h3 strong{ font-size:60px; padding:0 10px;}
+.zt_pmBox h3{ font-size:18px; }
+
+.zt_lineBox{ height:4px; background:#0086a4;}
+.zt_lineBox2{ height:10px; background:#0086a4; height:8px; margin-top:4px;}
+
+.zt_imgListUl{ height:80px; border-bottom:1px #dddddd solid }
+.zt_imgListUl .zt_imgUl1{ margin:20px 14px 0 14px; width:20px; line-height:40px; font-size:18px; text-align:center}
+.zt_imgListUl .zt_imgUl2{ margin-top:10px}
+.zt_imgListUl .zt_imgUl2 img{-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */ margin:0 auto; display:block;} 
+.zt_imgListUl .zt_imgUl3{ line-height:80px; font-size:18px; padding-left:14px; color:#727171}
+
+.zt_imgListUl .right{padding-right:10px;}
+.zt_imgListUl .right p{ font-size:18px; color:#727171; display:block; padding-top:12px; padding-bottom:2px;}
+.zt_imgListUl .right span{ float:left; height:30px; line-height:30px; color:#727171; font-size:16px; padding-right:6px}
+.zt_imgListUl .right .zt_imgUl4{ float:right}
+
+.zt_titleH1{ border-bottom:4px #0086a4 solid; height:30px; margin:0 10px}
+.zt_titleH1 strong{ font-size:14px; color:#FFF; padding:0 16px; background:#0086a4; display:block; height:30px; line-height:30px;}
+.zt_titleH1 a{ background:url(http://101.200.214.68/Uploads/gameInfoPic/icon8.jpg) no-repeat center right; padding-right:16px; display:block; line-height:18px; color:#898989}
+.zt_text_p{ margin:0 10px; padding:10px; border:1px #0086a4 solid;-moz-border-radius:20px;/* Gecko browsers */webkit-border-radius: 20px;   /* Webkit browsers */border-radius:20px;/* W3C syntax */ font-size:14px;}
+.zt_text_p p,.zt_text_p a{ color:#898989;font-size:14px; line-height:22px; text-indent:30px}
+.zt_text_p p {text-align:justify;text-justify:inter-ideograph}
+
+.zt_hotHot{ margin:0 10px}
+.zt_hotHot li{ float:left; width:50%; display:block; height:60px; padding-top:10px}
+.zt_hotHot li img{-moz-border-radius:150px;/* Gecko browsers */webkit-border-radius: 150px;   /* Webkit browsers */border-radius:150px;/* W3C syntax */display:block; float:left; margin-right:10px;}
+.zt_hotHot li h2{ font-size:16px; color:#727171; display:block; padding-top:6px}
+.zt_hotHot li p{ font-size:14px; color:#727171}
+.zt_xqListUl{ padding:20px; line-height:20px; font-size:14px; color:#898989}
+
+.zt_xqTitle{ text-align: center; padding:8px 0; line-height:26px; border-bottom:4px #0086a4 solid}
+.zt_xqTitle h2{ color:#898989; font-size:18px;}
+.zt_xqTitle h3{ color:#898989;font-size:18px;}
+
+.zt_xqText{ background:#f4f5f5; padding:6px 16px;}
+.zt_xpTextList h3{ display: inline-block; background:#0086a4; color:#FFF;-moz-border-radius:15px;/* Gecko browsers */webkit-border-radius: 15px;   /* Webkit browsers */border-radius:15px;/* W3C syntax */ line-height:24px; padding:2px 16px; margin:10px 0; font-size:14px}
+.zt_xpTextList_p{ background:#FFF; color:#898989;-moz-border-radius:4px;/* Gecko browsers */webkit-border-radius:4px;   /* Webkit browsers */border-radius:4px;/* W3C syntax */ padding:10px; font-size:14px; line-height:22px;}
+
+
+</style>
+<head>
+<title>今日排行榜</title>
+<meta name="description" content="今日排行榜" />
+<meta name="Keywords" content="今日排行榜" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<!-- <script src="js/tabQh.js" type="text/javascript"></script> -->
+</head>
+<body>
+<div class="zt_img"><img src="http://101.200.214.68/Uploads/Picture/GamePic/2016-04-04/5702794c0a73f.jpg" width="100%" /></div>
+<div class="zt_he10"></div>
+<div class="zt_titleH1"><strong class="left">赛事信息</strong><a href="{{brief_intro_url}}" class="right">查看</a></div>
+<div class="zt_he10"></div>
+<div class="zt_text_p">
+	<p>2016年是"十三·五"的开局之年。为进一步贯彻落实"全民健身国家战略"，深入开展全民健身活动。为了丰富区内群众体育活动，促进广大群众的身心健康，培养广大群众健身意识，普及健康知识和文明健康的生活方式，提升幸福指数，让广大群众参与到健步活动中来，养成日行万步的生活习惯。</p>
+	<a href="#">......</a>
+</div>
+<div class="zt_he10"></div>
+<div class="zt_he10 bg_eeeeee bd_bt"></div>
+<div class="zt_he10"></div>
+<div class="zt_titleH1"><strong class="left">最近运动</strong><a href="{{rank_url}}" class="right">查看完整排行</a></div>
+
+<div class="zt_hotHot">
+	<ul>
+	   {% if recent_run_man is False %}
+           <center>赛事还未开始，敬请期待</center>
+	   {% elif recent_run_man  %}
+	      {%  for user_info in recent_run_man %}
+		      <li><img src="{{user_info['avatar']}}" width="60" height="60" /><h2>{{user_info['nickname']}}</h2><p>运动{{user_info['step']}}步</p></li>
+	      {% end %}
+	   {% else %}
+          <center style="font-size:25px;padding:10px;">还没有人运动哦，快来运动吧</center>
+	   {% end %}
+	</ul>
+	<div class="clear"></div>
+</div>
+
+<div class="zt_he10"></div>
+<div class="zt_he10 bg_eeeeee bd_bt"></div>
+<div class="zt_he10"></div>
+<div class="zt_titleH1"><strong class="left">赛事概要</strong></div>
+<div class="zt_xqListUl">
+	<p>赛事名称：北京市房山区线上健步走</p>
+	<p>时间：2016年5月-2017年1月</p>
+	<div class="zt_he10"></div>
+	<ul>
+		<li>● 报名时间：2016年-2017年1月每月两期</li>
+		<li>● 报名要求：北京市房山区工作及生活的北京人</li>
+		<li>● 报名费用：免费</li>
+		<li>● 参与办法：点击下方按钮填写报名信息即可</li>
+		<li>● 报名前请认真阅读"赛事信息"</li>
+	</ul>
+</div>
+
+
+</body>
+
+</html>

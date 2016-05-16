@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>今日排行榜</title>
+<meta name="description" content="今日排行榜" />
+<meta name="Keywords" content="今日排行榜" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<title>今日排行榜</title>
+<meta name="description" content="今日排行榜" />
+<meta name="Keywords" content="今日排行榜" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<style>
+  @charset "utf-8";
+/* 全局样式 */
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal;}
+body>div, form>div {margin:0 auto;}
+div {text-align:left;}
+a img {border:0;}
+table{border-collapse:collapse; border-spacing:0;}
+select,textarea{font: 12px Arial,"微软雅黑";}
+body {color:#454545;text-align:center;font: 12px Arial,"微软雅黑";}
+ul, ol, li {list-style-type:none;vertical-align:0;}
+a {outline-style:none;color:#454545;text-decoration:none;}
+a:hover {color:#035f79;text-decoration:none;}
+a, area {blr:expression(this.onFocus=this.blur())}
+:focus {-moz-outline-style: none;}
+.clear {clear:both;}
+.hidden {display:none;}
+.block {display:block;}
+
+.right{float:right;}
+.bd{border:1px #e1e1e1 solid; background:#FFF}
+.bd3{border:1px #e1e1e1 solid; border-top:0px; background:#FFF}
+
+
+/* 首页样式 */
+.zt_bgf5f5f5{ background:#f5f5f5}
+.zt_he10{ height:10px; font-size:0;}
+.bg_eeeeee{ background:#eeeeee}
+.zt_img img{ display:block}
+.zt_img_yj{ -moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.bd_bt{ border-top:1px #d9d9d9 solid}
+
+.zt_text1 h2 img{ display:block; margin:8px auto}
+.zt_text1 p{ text-align:center; font-size:14px; color:#898989}
+.zt_text1 { padding-bottom:8px; padding-top:2px}
+.zt_listUl{ padding:4% 0;}
+.zt_listUl .zt_img{ width:18%; padding:0 2%}
+.zt_listUl .zt_img img{ display:block;-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.zt_listUl .zt_text{ width:78%}
+.zt_listUl .zt_text p{ font-size:13px}
+.zt_listUl h2 span{ color:#c9cfd0; float:left; margin:8px 0 0 6px}
+.zt_listUl h2 { height:26px; display:block; overflow:hidden; margin-bottom:4px}
+.zt_listUl h2 img{ display:block; float:left; color:#898989}
+.zt_listUl p{ display:block; color:#898989; background:url(http://101.200.214.68/Uploads/gameInfoPic/icon4.png) no-repeat left center; padding-left:20px; line-height:160% }
+
+
+.zt_imgListUl{ height:80px; border-bottom:1px #dddddd solid }
+.zt_imgListUl .left .zt_text_p{ margin:0px 6px 0px 0px; line-height:30px; font-size:16px; text-align:left}
+.zt_imgListU1 .left{float:left; width:50%; display:inline;}
+
+.zt_imgListUl .right{padding-right:10px; width:50%;display:inline;}
+.zt_imgListUl .right p{ font-size:16px; color:#727171;text-align:right;  display:inline; padding-top:12px; padding-bottom:2px;}
+
+.zt_text_p{ margin:0px 0px; padding:10px; -moz-border-radius:5px;/* Gecko browsers */webkit-border-radius: 5px;   /* Webkit browsers */border-radius:5px;/* W3C syntax */ font-size:14px;}
+
+
+.hide{display: none;}
+</style>
+
+</head>
+<body class="mChangeTag">
+
+<div>
+    <div class="zt_lineBox"></div>
+    <div class="zt_lineBox2"></div>
+    {% for point_info in user_point_list %}
+    <div class="zt_imgListUl">
+      <div class="left">
+          <div class="zt_text_p">{{point_info['name']}}</div>
+      </div>
+      <div class="right">
+        <p>{{point_info['point_num']}}积分</p>
+        <p>{{point_info['time']}}</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    {% end %}
+    
+  </div>
+
+
+
+</body>
+</html>

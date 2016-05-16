@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>今日排行榜</title>
+<meta name="description" content="今日排行榜" />
+<meta name="Keywords" content="今日排行榜" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<style>
+	@charset "utf-8";
+/* 全局样式 */
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal;}
+body>div, form>div {margin:0 auto;}
+div {text-align:left;}
+a img {border:0;}
+table{border-collapse:collapse; border-spacing:0;}
+select,textarea{font: 12px Arial,"微软雅黑";}
+body {color:#454545;text-align:center;font: 12px Arial,"微软雅黑";}
+ul, ol, li {list-style-type:none;vertical-align:0;}
+a {outline-style:none;color:#454545;text-decoration:none;}
+a:hover {color:#035f79;text-decoration:none;}
+a, area {blr:expression(this.onFocus=this.blur())}
+:focus {-moz-outline-style: none;}
+.clear {clear:both;}
+.hidden {display:none;}
+.block {display:block;}
+.left{float:left;}
+.right{float:right;}
+.bd{border:1px #e1e1e1 solid; background:#FFF}
+.bd3{border:1px #e1e1e1 solid; border-top:0px; background:#FFF}
+
+
+/* 首页样式 */
+.zt_bgf5f5f5{ background:#f5f5f5}
+.zt_he10{ height:10px; font-size:0;}
+.bg_eeeeee{ background:#eeeeee}
+.zt_img img{ display:block}
+.zt_img_yj{ -moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.bd_bt{ border-top:1px #d9d9d9 solid}
+
+.zt_text1 h2 img{ display:block; margin:8px auto}
+.zt_text1 p{ text-align:center; font-size:14px; color:#898989}
+.zt_text1 { padding-bottom:8px; padding-top:2px}
+.zt_listUl{ padding:4% 0;}
+.zt_listUl .zt_img{ width:18%; padding:0 2%}
+.zt_listUl .zt_img img{ display:block;-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.zt_listUl .zt_text{ width:78%}
+.zt_listUl .zt_text p{ font-size:13px}
+.zt_listUl h2 span{ color:#c9cfd0; float:left; margin:8px 0 0 6px}
+.zt_listUl h2 { height:26px; display:block; overflow:hidden; margin-bottom:4px}
+.zt_listUl h2 img{ display:block; float:left; color:#898989}
+.zt_listUl p{ display:block; color:#898989; background:url(http://101.200.214.68/Uploads/gameInfoPic/icon4.png) no-repeat left center; padding-left:20px; line-height:160% }
+.zt_listUl a{ display:block; background:url(http://101.200.214.68/Uploads/gameInfoPic/jtBg.png) no-repeat right center;}
+
+
+.zt_listUl.alt{ background:#eef8fa url(http://101.200.214.68/Uploads/gameInfoPic/lineBg.jpg) repeat-x top; border-bottom:1px #e5e5e5 solid }
+
+.zt_top{ height:40px; line-height:40px; background:#fafafa}
+.zt_top li{ float:left; width:20%; display:block; height:40px; text-align:center; font-size:16px}
+.zt_top li.mCon_Cutbtn{ background:url(http://101.200.214.68/Uploads/gameInfoPic/lineBg1.jpg) no-repeat center top; color:#FFF}
+.zt_top li.mCon_CutbtnBg{ background:url(http://101.200.214.68/Uploads/gameInfoPic/icon7.jpg) no-repeat right; color:#0088a3; font-weight:bold}
+.zt_top li.mCon_CutbtnBg span{ padding-right:24px;}
+.zt_pmBoxIcone{ width:40px; position:absolute; right:20px; top:40px; text-align:center}
+
+
+.zt_pmBox{ width:100%;background-image: url(http://101.200.214.68/Uploads/gameInfoPic/bg01.jpg);background-attachment:fixed;background-repeat:no-repeat;background-size:cover;-moz-background-size:cover;-webkit-background-size:cover; position:relative}
+.zt_pmBox h2,.zt_pmBox h3{ display:block; text-align:center}
+
+.zt_pmBoxBg img{-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */ margin:0 auto; display:block;}
+.zt_pmBoxBg { width:124px; height:124px; margin:0 auto; background: url(http://101.200.214.68/Uploads/gameInfoPic/tuPic.png) no-repeat}
+.zt_pmBoxText{ text-align:center; font-size:18px; line-height:50px; padding:0 10px; position:relative}
+.zt_pmBoxText span.right{ position:absolute; right:10px; top:0px;}
+.zt_pmBoxText span{ display:inline-block}
+
+.zt_pmBox h2{ color:#414141; font-size:18px; display:block; padding-top:16px}
+.zt_pmBox h3 strong{ font-size:60px; padding:0 10px;}
+.zt_pmBox h3{ font-size:18px; }
+
+.zt_lineBox{ height:4px; background:#0086a4;}
+.zt_lineBox2{ height:10px; background:#0086a4; height:8px; margin-top:4px;}
+
+.zt_imgListUl{ height:80px; border-bottom:1px #dddddd solid }
+.zt_imgListUl .zt_imgUl1{ margin:20px 14px 0 14px; width:20px; line-height:40px; font-size:18px; text-align:center}
+.zt_imgListUl .zt_imgUl2{ margin-top:10px}
+.zt_imgListUl .zt_imgUl2 img{-moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */ margin:0 auto; display:block;} 
+.zt_imgListUl .zt_imgUl3{ line-height:80px; font-size:18px; padding-left:14px; color:#727171}
+
+.zt_imgListUl .right{padding-right:10px;}
+.zt_imgListUl .right p{ font-size:18px; color:#727171; display:block; padding-top:12px; padding-bottom:2px;}
+.zt_imgListUl .right span{ float:left; height:30px; line-height:30px; color:#727171; font-size:16px; padding-right:6px}
+.zt_imgListUl .right .zt_imgUl4{ float:right}
+
+.zt_titleH1{ border-bottom:4px #0086a4 solid; height:30px; margin:0 10px}
+.zt_titleH1 strong{ font-size:14px; color:#FFF; padding:0 16px; background:#0086a4; display:block; height:30px; line-height:30px;}
+.zt_titleH1 a{ background:url(http://101.200.214.68/Uploads/gameInfoPic/icon8.jpg) no-repeat center right; padding-right:16px; display:block; line-height:30px; color:#898989}
+.zt_text_p{ margin:0 10px; padding:10px; border:1px #0086a4 solid;-moz-border-radius:20px;/* Gecko browsers */webkit-border-radius: 20px;   /* Webkit browsers */border-radius:20px;/* W3C syntax */ font-size:14px;}
+.zt_text_p p,.zt_text_p a{ color:#898989;font-size:14px; line-height:22px; text-indent:30px}
+.zt_text_p p {text-align:justify;text-justify:inter-ideograph}
+
+.zt_hotHot{ margin:0 10px}
+.zt_hotHot li{ float:left; width:50%; display:block; height:60px; padding-top:10px}
+.zt_hotHot li img{-moz-border-radius:150px;/* Gecko browsers */webkit-border-radius: 150px;   /* Webkit browsers */border-radius:150px;/* W3C syntax */display:block; float:left; margin-right:10px;}
+.zt_hotHot li h2{ font-size:16px; color:#727171; display:block; padding-top:6px}
+.zt_hotHot li p{ font-size:14px; color:#727171}
+.zt_xqListUl{ padding:20px; line-height:20px; font-size:14px; color:#898989}
+
+.zt_xqTitle{ text-align: center; padding:8px 0; line-height:26px; border-bottom:4px #0086a4 solid}
+.zt_xqTitle h2{ color:#898989; font-size:18px;}
+.zt_xqTitle h3{ color:#898989;font-size:18px;}
+
+.zt_xqText{ background:#f4f5f5; padding:6px 16px;}
+.zt_xpTextList h3{ display: inline-block; background:#0086a4; color:#FFF;-moz-border-radius:15px;/* Gecko browsers */webkit-border-radius: 15px;   /* Webkit browsers */border-radius:15px;/* W3C syntax */ line-height:24px; padding:2px 16px; margin:10px 0; font-size:14px}
+.zt_xpTextList_p{ background:#FFF; color:#898989;-moz-border-radius:4px;/* Gecko browsers */webkit-border-radius:4px;   /* Webkit browsers */border-radius:4px;/* W3C syntax */ padding:10px; font-size:14px; line-height:22px;}
+
+</style>
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="zt_img"><img src="http://101.200.214.68/Uploads/Picture/GamePic/2016-04-04/5702794c0a73f.jpg" width="100%" /></div>
+<div class="zt_xqTitle">
+	<h2>北京市房山区线上健步走</h2>
+	<h3>活动规程</h3>
+</div>
+<div class="zt_xqText">
+	<div class="zt_xpTextList">
+		<h3>一、活动主题</h3>
+		<div class="zt_xpTextList_p">
+			<p>健康北京人 科技运动汇</p>
+		</div>
+	</div>
+	<div class="zt_xpTextList">
+		<h3>二、活动组织</h3>
+		<div class="zt_xpTextList_p">
+			<p>主办：北京市房山区体育局</p>
+			<p>北京市房山区体育总会</p>
+			<p>承办：北京菲奥文化传播有限公司</p>
+			<p>北京良新里奥体育文化有限公司</p>
+		</div>
+	</div>
+	<div class="zt_xpTextList">
+		<h3>三、活动对象</h3>
+		<div class="zt_xpTextList_p">
+			<p>北京市房山区工作及生活的北京人</p>
+		</div>
+	</div>
+	<div class="zt_xpTextList">
+		<h3>四、活动时间</h3>
+		<div class="zt_xpTextList_p">
+			<p>2016年5月-2017年1月（每月开展2期）</p>
+		</div>
+	</div>
+	<div class="zt_xpTextList">
+		<h3>五、活动形式</h3>
+		<div class="zt_xpTextList_p">
+			<p>1、参赛者下载并安装"全民健身Ready Go"手机应用，支持安卓平台与ios平台</p>
+			<p>2、打开该应用，进入对应活动页面参与活动并报名，可参加团队赛或个人赛，同一参赛者可同时参加两项赛事。个人报名不设条件限制，填写报名信息即可参与。团队报名总人数不得少于10人。</p>
+			<p>3、活动期间内，参赛者只需进入活动页面，点击开始运动，即可任意时间地点，进行竞赛。</p>
+			<p>4、每场活动为期一周，总人数上限为50000人。</p>
+			<p>5、团队赛设人气奖和超级团队奖，个人赛设健步达人奖</p>
+		</div>
+	</div>
+	<div class="zt_xpTextList">
+		<h3>六、活动规则</h3>
+		<div class="zt_xpTextList_p">
+			<p>1、活动规则</p>
+			<p>为保证赛事公平公正，参与运动过程中，APP应用后台识别运动参与者异常状态并提示，如超出常人健步极限速度等，APP应用第一次予以通知提示，第二次警告，第三次限制参与。</p>
+			<p>2、个人成绩统计规则：</p>
+			<p>◆个人成绩设健步达人奖；单日排名、周排名、月排名、季排名及年度排名均使用以下统计规则。</p>
+			<p>健步达人奖以自然日内行进总步数作为依据，每日/周/月/季/年行进总步数作为最终成绩，行进步数越多者排名靠前。</p>
+			<p>3、活动排名规则：</p>
+			<p>（1）个人赛（健步达人奖）</p>
+			<p>①自然日内行进总步数多者，排名靠前。</p>
+			<p>②以上相同，万步率（活动期间每天达到1万步的比率）高者排名靠前。</p>
+			<p>③以上均相同，上传时间（参与者运动停止时间）越早 ，排名靠前。</p>
+		</div>
+	</div>
+	<div class="zt_xpTextList">
+		<h3>七、奖励办法</h3>
+		<div class="zt_xpTextList_p">
+			<p>1、参与者积分奖励</p>
+			<p>（1）参与奖：报名参与比赛，奖励100积分。</p>
+			<p>（2）个人奖励办法</p>
+			<p>◆健步达人奖周、月、季及年度排名均使用以下奖励办法。</p>
+			<p>第1-100名奖励2000积分；</p>
+			<p>第101-1000名奖励1000积分；</p>
+			<p>第1001-3000名奖励800积分；</p>
+			<p>第3001-6000名奖励500积分；</p>
+			<p>第6001-10000名奖励200积分。</p>
+			<p>（3）团队奖励办法</p>
+			<p>◆人气奖与超级团队奖周、月、季及年度排名均使用以下奖励办法。</p>
+			<p>第1-100名奖励2000积分；</p>
+			<p>第101-1000名奖励1000积分；</p>
+			<p>第1001-3000名奖励800积分；</p>
+			<p>第3001-6000名奖励500积分；</p>
+			<p>第6001-10000名奖励200积分。</p>
+			<p>（4）科学运动奖励机制</p>
+			<p>◆为倡导科学锻炼制定，特设以下单日&quot;科学运动&quot;叠加奖励机制</p>
+			<p>单日完成7000步以下不奖励；行进7001-9000步且在60-100分钟内完成叠加奖励20积分；行进9001-11000步且在80-120分钟内完成叠加奖励50积分；行进11001-13000步且在100-140分钟完成叠加奖励30积分；13001</p>
+			<p>步以上不奖励。</p>
+			<p>（注：叠加奖励只奖励一次，不重复奖励，以最高奖励积分为最终奖励。）</p>
+			<p>2、年终奖励</p>
+			<p>（1）赛事前设定年终大奖并公布，年度开展线下活动表彰会并发放奖品。</p>
+			<p>（2）对优秀团队进行表彰。</p>
+			<p>（3）对各年龄段优秀个人进行表彰。</p>
+		</div>
+	</div>
+	<div class="zt_he10"></div>
+</div>
+	
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  
+    <link rel="stylesheet" href="{{ static_url("blog.css") }}" type="text/css"/>
+    <script type="text/javascript" src="{{static_url("jquery.js")}}"></script>
+
+  </head>
+  <body>
+     <div>
+        <div style="color:green; margin-top:20px;font-size:25px;margin-bottom:10px;">{{username}}</div>
+          <div>
+               <button style="color:pink;" id="follow">follows him</button>
+               <span style="display:none;">{{userid}}</span>
+          </div>
+
+        <br/><hr/>
+        <div>
+           {% for post in postinfo %}
+             <div><span>{{post['current_time']}}</span></div>
+             <div>{{post['post_content']}}</div>
+             <hr/> 
+           {% end %}
+        </div>
+     </div>
+<script type="text/javascript">
+  $('#follow').click(function(){
+     sendData = {userid:$(this).next().html()}
+       $.ajax({
+        'type':'post',
+        'data':sendData,
+        'url':'/follow',
+        'success':function(data){
+            if(data == '0') return 
+            else location.reload()
+
+         }})
+  })
+
+</script>
+	   
+       
+       
+
+  </body>
+</html>

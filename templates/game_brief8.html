@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>赛事名称</title>
+<meta name="description" content="赛事名称" />
+<meta name="Keywords" content="赛事名称" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<style>
+	@charset "utf-8";
+/* 全局样式 */
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal;}
+body>div, form>div {margin:0 auto;}
+div {text-align:left;}
+a img {border:0;}
+table{border-collapse:collapse; border-spacing:0;}
+select,textarea{font: 12px Arial,"微软雅黑";}
+body {color:#454545;text-align:center;font: 12px Arial,"微软雅黑";}
+ul, ol, li {list-style-type:none;vertical-align:0;}
+a {outline-style:none;color:#454545;text-decoration:none;}
+a:hover {color:#035f79;text-decoration:none;}
+a, area {blr:expression(this.onFocus=this.blur())}
+:focus {-moz-outline-style: none;}
+.clear {clear:both;}
+.hidden {display:none;}
+.block {display:block;}
+.left{float:left;}
+.right{float:right;}
+.bd{border:1px #e1e1e1 solid; background:#FFF}
+.bd3{border:1px #e1e1e1 solid; border-top:0px; background:#FFF}
+
+
+/* 首页样式 */
+.zt_bgf5f5f5{ background:#f5f5f5}
+.zt_he10{ height:10px; font-size:0;}
+.bg_eeeeee{ background:#eeeeee}
+.zt_img img{ display:block}
+.zt_img_yj{ -moz-border-radius:100px;/* Gecko browsers */webkit-border-radius: 100px;   /* Webkit browsers */border-radius:100px;/* W3C syntax */}
+.bd_bt{ border-top:1px #d9d9d9 solid}
+
+
+.zt_title a{ display:block; font-size:16px; padding-left:10px; background:url(http://101.200.214.68/Uploads/gameInfoPic/icon8.jpg) no-repeat right center; height:40px; line-height:40px; color:#3e3a39}
+.zt_titleLine{ border-bottom:1px #9a9999 solid; border-top:2px #9a9999 solid; color:#070506; font-size:18px; line-height:40px; margin:0 10px}
+
+.zt_boxP P{ display:block; font-size:16px; padding-left:26px; background: url(http://101.200.214.68/Uploads/gameInfoPic/icon1.jpg) no-repeat left 4px; color:#727171; line-height:34px;}
+.zt_boxP{ border-bottom:1px #9a9999 solid; margin:0 10px; padding:10px 0;}
+.zt_boxP P a{ font-weight:bold}
+.zt_title_st{ border-bottom:1px #9a9999 solid; margin:0 20px; padding:10px 0}
+.zt_title_st strong{ display:block; border-left:5px #070506 solid; font-size:18px; color:#070506; padding-left:5px;}
+
+.zt_boxText p{ font-size:16px; text-align:center; display:block; line-height:24px;}
+.zt_tabBd{ padding:10px;}
+.zt_tabBd td,.zt_tabBd th{ text-align:center; line-height:24px; font-size:14px; border:1px #727171 solid}
+.zt_tabBd th{ background:#CCC}
+
+.zt_boxText1_1 p{ text-align:left }
+.zt_boxText1_1 { padding:20px 30px}
+.zt_boxText1_2{ padding:10px 20px;}
+.zt_boxText1_2 p{ font-size:16px;  display:block; line-height:24px;}
+
+.mlsPm { font-size:0; background:#fafafa; height:40px;}
+.mlsPm li{ display:inline-block;  height:40px; width:33.33%; font-size:14px; text-align:center; line-height:40px; color:#413f3f}
+.mlsPm li.mCon_Cutbtn{background: url(http://101.200.214.68/Uploads/gameInfoPic/lineBg1.jpg) no-repeat center center; color:#fff}
+
+
+.zt_pmList_tt{ background:#efeff0; padding-top:16px; padding:20px 0 6px 20px; border-bottom:1px #dddddd solid; border-top:1px #dddddd solid }
+.zt_pmList_tt strong{ display: block; background:url(http://101.200.214.68/Uploads/gameInfoPic/icon2.jpg) no-repeat left; padding-left:18px; font-size:18px; line-height:30px; font-weight: normal }
+.zt_pmList{ height:62px; margin:0 10px;border-bottom:1px #dddddd solid; padding-top:14px; line-height:50px}
+.zt_pmList span{ float:left; display:block; width:40px; text-align:center; line-height:50px; font-size:18px; color:#727171}
+.zt_pmList strong{ font-size:18px; font-weight:normal; color:#727171; padding-left:10px;}
+.zt_pmList .right{font-size:18px; font-weight:normal; color:#727171; padding-right:6px}
+
+
+
+.mlsTitle1_1{ color:#4489a8; font-size:18px; text-align:center; padding:12px 0} 
+.mlsTitle{ color:#3e3a39; background:#FFF}
+.mlsTitle strong{color:#3e3a39; display:block; background:url(http://101.200.214.68/Uploads/gameInfoPic/icon2.jpg) no-repeat left center; font-size:18px; padding-left:14px; margin-left:14px; height:36px; line-height:36px;}
+.mlsBoxp{ background:#efeff0; padding:10px 16px; font-size:14px; color:#727171; line-height:26px;}
+.mlsBoxp h1{ font-size:14px;color:#727171}
+.mlsBoxp p{ text-indent:30px;}
+.mlsBoxp li{ padding-left:16px}
+
+
+</style>
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script>
+	
+jQuery(function(){
+	
+	
+jQuery(".mChangeTag .mCon_btn").click(function(){jQuery(this).parent().find(".mCon_btn").removeClass("mCon_Cutbtn");jQuery(this).addClass("mCon_Cutbtn");var cutNum=jQuery(this).parent().find(".mCon_btn").index(this);jQuery(this).parents(".mChangeTag").find(".mCon_conTxt").hide();jQuery(this).parents(".mChangeTag").find(".mCon_conTxt").eq(cutNum).show();})
+
+$(".zt_listUl:odd").addClass("alt");    
+    //给class为stripe的表格的偶数行添加class值为alt 
+    //www.divcss5.com 整理特效 
+
+})
+</script>
+</head>
+<body>
+<div class="zt_img"><img src="http://101.200.214.68/Uploads/gameInfoPic/msp3.jpg" width="100%" /></div>
+<div class="mlsTitle1_1">北京人健康马上跑竞赛规程</div>
+<div class="zt_he10 bg_eeeeee"></div>
+<div class="mlsTitle"><strong>主办单位</strong></div>
+<div class="mlsBoxp">
+	<ul>
+	<li>房山区体育局 </li>
+	<li>房山区水务局 </li>
+	<li>北京人遗址博物馆</li>
+	<li>房山区体育总会</li>
+	</ul>
+</div>
+<div class="mlsTitle"><strong>承办单位</strong></div>
+<div class="mlsBoxp">
+<ul>
+
+  <li>窦店镇人民政府</li>
+  <li>长阳镇人民政府</li>
+  <li>良乡镇人民政府</li>
+  <li>琉璃河镇人民政府  </li>
+  <li>房山区户外运动协会</li>
+  <li>北京菲奥文化传播有限公司</li>
+  <li>北京良新理奥体育文化有限公司</li>
+	</ul>
+</div>
+
+<div class="mlsTitle"><strong>赛前快读</strong></div>
+<div class="mlsBoxp">
+<ul>
+
+   <li>比赛项目：马上跑（4X14.8km）</li>
+   <li>比赛时间：2016年5月15日（周日）上午9：00</li>
+   <li>截止报名：2016年5月11日（周三）下午24：00</li>
+   <li>参赛名额：团队报名450组(1800人）&nbsp;&nbsp;&nbsp;个人报名50组（组委会随机4人组队）200人   </li>
+   <li>比赛地点：北京市房山区良乡镇候庄村小清河</li>
+   <li>检录时间：5月15日（周日）上午8：30</li>
+	</ul>
+</div>
+
+<div class="mlsTitle"><strong>报名办法</strong></div>
+<div class="mlsBoxp">
+<ul>
+
+   <li><strong>报名费用：</strong>50元/人 </li>
+   <li>包括：运动臂包、号码布、纪念品、完赛证书、保险费、小丽都和瀞度提供的完赛营养补给、中国劲酒有限公司提供600ml中国劲酒礼盒一提、习羿弓社射箭券</li>
+   <li><strong>竞赛分组：</strong></li>
+   <li>男子组、女子组、混合组（随机分配）</li>
+   <li><strong>规则：</strong></li>
+   <li>同意组委会随机组队办法，随机组成队伍，随机参赛组别（男子组、女子组、混合组）</li>
+   <li><strong>报名：</strong></li>
+   <li><strong>个人报名：</strong>下载”全民健身Ready Go”手机app→注册并登录→赛事活动页面选择“北京人健康马上跑”→点击底部“我要报名”→选择“个人报名”填写资料并提交→报名成功</li>
+   <li><strong>团队报名：</strong></li>
+   <li>   方式1：网站报名： www.bjfio.com/msp.html（如果是4人组队报名建议使用此方式）</li>
+   <li>方式2：下载“全民健Ready Go“app注册并登录→团队组建→添加团队成员→赛事报名（点击团队报名）→报名成功</li>
+   <li><strong>参赛装备领取：</strong></li>
+   <li><strong>时间：</strong>5月13、14日 8：30-17：00至房山区良乡体育场路昊然巨力体育用品商店（北京市房山区体育场路4号，房山区体育局旁） 联系电话：010-89368944（建议提前领取号码布）或5月15日 上午8：00 -9:00检录现场领取</li>
+
+
+
+
+
+
+
+	</ul>
+</div>
+
+
+
+<div class="mlsTitle"><strong>参赛办法</strong></div>
+<div class="mlsBoxp">
+     <h1>(一)竞赛分组</h1>
+	 <p>竞赛分组分为职工组、教委组、社会组3个组别。</p>
+	 <p>1、职工组：由区直各部、委、办、局及所属事业单位及其邀请单位组队参加；</p>
+	 <p>2、教委组：由区内初中、高中为单位组队参加；</p>
+	 <p>3、社会组：由各跑团、社会组织为单位组队参加。</p>
+     <h1>（二）参赛队组队形式</h1>
+	 <p>1、男子团体（4名男性）</p>
+	 <p>2、女子团体（4名女性）</p>
+	 <p>3、混合团体（2男2女）</p>
+     <h1>（三）比赛时各组需具有必要的队名，并统一服装。</h1>
+	 <h1>（四）健康要求</h1>
+	 <p>北京人健康马上跑是一项高负荷、大强度、长距离的竞技运动，也是一项高风险的竞技项目，对参赛者身体状况有较高的要求。参赛者应身体健康，且经常性参加跑步锻炼或训练。参赛者可根据自己的身体状况和体能，选择参赛。有以下身体状况者不宜参加比赛：</p>
+	 <p>1、先天性心脏病和风湿性心脏病患者；</p>
+	 <p>2、高血压和脑血管疾病患者；</p>
+	 <p> 3、心肌炎和其它心脏病患者；</p>
+	 <p>4、冠状动脉病患者和严重心律不齐者；</p>
+	 <p>5、血糖过高或过低的糖尿病患者；</p>
+	 <P>7、其他不适合运动的疾病患者；</P>
+	 <p>8、孕妇。</p>
+</div>
+<div class="mlsTitle"><strong>比赛办法</strong></div>
+<div class="mlsBoxp">
+     <h1>（一）比赛规程：</h1>
+	 <p> 参赛队由出发点起跑开始计时，四人为一组跑完全程，四名队员总用时，为该队比赛成绩。</p>
+	 <h1>（二）比赛检录：</h1>
+	 <p>在规定的检录时间内到指定区域进行检录。</p>
+	 <h1>（三）发令：</h1>
+	 <p>比赛采用一枪发令同时起跑。  </p>
+     <h1>（四）报名系统</h1>
+	 <P>报名参赛队下载并注册活动指定马上跑报名软件，交纳报名费，即可确认报名成功（注意：只有成功绑定账号的用户跑步里程才能成功计入排行榜）</P>
+	 <h1>（五）计时系统</h1>
+	 <p>组委会为每名队员发放感应计时芯片，计时芯片将在队员通过起点开始计时，提供净计时成绩。在起、终点、半程点设有计时地毯，四名选手通过终点后，成绩总和为比赛成绩。</p>
+	 <h1>（六）饮水</h1>
+	 <p>组委会在起点后2KM、5KM、7.4KM、10KM、12KM设置饮水通道，需饮用水者进入饮水通道饮水，饮水完毕后方能跑出饮水通道。</p>
+</div>
+<div class="mlsTitle"><strong>报名办法</strong></div>
+<div class="mlsBoxp">
+       <h1>（一）截止报名日期</h1>
+	   <p>登陆：http:/www.bjfio.com/msp.html</p>
+       <h1>（二）参赛费用</h1>
+           <p>个人报名，报名费每人50元，
+	   <P>  每队报名费300元，包含臂包、号码布完赛营养补给，组委会并为每名参赛运动员上赛事意外保险。</P>
+	   <h1>（三）报名材料</h1>
+	   <p> 请报名人员填写好电子和纸质表格，并签署运动员声明。电子版报名表发至bj_fio@126.com</p>
+	   <p>联系人： 李老师 15626217875   </p>
+	   <P>石老师 13381218062</P>
+	   <p>报名座机：010-86381313</p>
+</div>
+<div class="mlsTitle"><strong>其它信息</strong></div>
+<div class="mlsBoxp">
+     <p> 未尽事项，另行通知，本规程解释权归属北京人马上跑组委会和全民健身Ready go所有.</p>
+</div>
+
+
+
+</body>
+</html>
